@@ -25,3 +25,5 @@ loginBtn.addEventListener("click", function (event) {
     alert("Mobile Number and Password not maching");
   }
 });
+
+// home button function

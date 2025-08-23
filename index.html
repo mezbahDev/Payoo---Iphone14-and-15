@@ -25,21 +25,25 @@
     </div>
 
 
-    <form class="flex flex-col gap-4 w-[402px] bg-[#ffffff] p-8 border border-1 border-[#ffffff] rounded-[24px]">
+    <form class="flex flex-col gap-4 w-[402px] bg-[#ffffff] p-8 border border-[#ffffff] rounded-[24px]">
         <div class="flex flex-col w-full gap-3">
-            <label class="text-[#080808] font-weight-300 pl-1">Mobile Number</label>
+            <label class="text-[#080808] font-light pl-1">Mobile Number</label>
             <input id="mobileNumber" type="text" placeholder="Enter Your Number" required
-                class="input px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] focus:border-blue-400 focus:outline-none border-none" />
+                class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-2 border-gray-300 focus:border-blue-400 focus:outline-none" />
         </div>
-        <div class=" flex flex-col w-full gap-3">
-            <label class="text-[#080808] font-weight-300 pl-1">4 Digit Pin</label>
-            <input id="pin" type="password" placeholder="Enter 4 Digit Pin" required
-                class="input px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] focus:border-blue-400 focus:outline-none border-none"
-                </div>
-            <button id="loginBtn" type="submit"
-                class="btn btn-active btn-primary w-full bg-[#0874F2] border-none rounded-[32px] text-[18px] h-[50px]">Login</button>
 
+        <div class="flex flex-col w-full gap-3">
+            <label class="text-[#080808] font-light pl-1">4 Digit Pin</label>
+            <input id="pin" type="password" placeholder="Enter 4 Digit Pin" required
+                class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-2 border-gray-300 focus:border-blue-400 focus:outline-none" />
+        </div>
+
+        <button id="loginBtn" type="submit"
+            class="btn btn-active btn-primary w-full bg-[#0874F2] border-none rounded-[32px] text-[18px] h-[50px]">
+            Login
+        </button>
     </form>
+
 
 
     <script src="script.js"></script>

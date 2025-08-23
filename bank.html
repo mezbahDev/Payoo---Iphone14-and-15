@@ -28,7 +28,7 @@
         <div class="flex items-center gap-2">
             <img src="/assets/Group.png" alt="" class="w-[50px]" />
             <div class="flex flex-col gap-[6px]">
-                <h1 class="font-extrabold text-[18px]">$<span id="mainBalance">45000</span></h1>
+                <h1 class="font-extrabold text-[18px]">$45000</h1>
                 <p class="text-[#666768] text-[14px]">Available Balance</p>
             </div>
         </div>
@@ -101,51 +101,70 @@
     </div>
 
 
-    <!-- add money section -->
+    <!-- latest payment section -->
 
-    <div class="px-6 mb-[140px] bg-[#F4F5F7] pt-8 flex flex-col gap-4">
-        <h1 class="text-[#080808] font-semibold text-[18px]">Add Money</h1>
+    <div class="px-6 pt-8 pb-[66px] flex flex-col gap-4 bg-[#0808080D]">
+        <div class="flex justify-between">
+            <h1 class="text-[18px] font-semibold">Latest Payment</h1>
+            <p class="text-[14px] text-[#666768]">View All</p>
+        </div>
 
-        <form class=" flex flex-col gap-4 bg-[#ffffff] p-6 rounded-[24px]">
-            <div class="w-full flex flex-col gap-3">
-                <h1 class="font-medium pl-1 text-[#080808B3]">Select A Bank</h1>
-                <select id="bankName"
-                    class="select select-primary w-full px-5 h-[40px] rounded-[32px] bg-[#F4F5F7] focus:border-blue-400 focus:outline-none text-[#08080880] shadow border-none cursor-pointer">
-                    <option disabled selected>Select bank</option>
-                    <option>Dutch Bangla Bank</option>
-                    <option>Islami Bank</option>
-                    <option>Janta Bank</option>
-                    <option>Pubali Bank</option>
-                </select>
+        <div class="flex justify-between items-center px-4 py-[13px] rounded-[12px] bg-[#ffffff]">
+            <div class="flex items-center gap-2">
+                <div class="w-[45px] h-[45px] rounded-[50%] bg-[#0808080D] flex items-center justify-center">
+                    <img src="/assets/wallet1.png" alt="wallet pic" />
+                </div>
+                <div class="flex flex-col text-[#080808B3]">
+                    <h1 class="font-semibold">Electricity Bill</h1>
+                    <p class="text-[12px]">Today <span>01:44 AM</span></p>
+                </div>
             </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
 
-            <div class="flex flex-col w-full gap-3">
-                <label class="font-light pl-1 font-medium text-[#080808B3]">Bank Account Number</label>
-                <input id="bankAccountNumber" type="number" placeholder="Enter 11 digit account number" required
-                    class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
+        <div class="flex justify-between items-center px-4 py-[13px] rounded-[12px] bg-[#ffffff]">
+            <div class="flex items-center gap-2">
+                <div class="w-[45px] h-[45px] rounded-[50%] bg-[#0808080D] flex items-center justify-center">
+                    <img src="/assets/wallet1.png" alt="wallet pic" />
+                </div>
+                <div class="flex flex-col text-[#080808B3]">
+                    <h1 class="font-semibold">Bank Deposit</h1>
+                    <p class="text-[12px]">Today <span>01:44 AM</span></p>
+                </div>
             </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
 
-            <div class="flex flex-col w-full gap-3">
-                <label class="font-light pl-1 font-medium text-[#080808B3]">Amount to Add</label>
-                <input id="addAmount" type="number" placeholder="Add Amount to withdraw" required
-                    class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
+        <div class="flex justify-between items-center px-4 py-[13px] rounded-[12px] bg-[#ffffff]">
+            <div class="flex items-center gap-2">
+                <div class="w-[45px] h-[45px] rounded-[50%] bg-[#0808080D] flex items-center justify-center">
+                    <img src="/assets/wallet1.png" alt="wallet pic" />
+                </div>
+                <div class="flex flex-col text-[#080808B3]">
+                    <h1 class="font-semibold">Mobile Recharge</h1>
+                    <p class="text-[12px]">Today <span>01:44 AM</span></p>
+                </div>
             </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
 
-            <div class="flex flex-col w-full gap-3">
-                <label class="font-light pl-1 font-medium text-[#080808B3]">Pin Number</label>
-                <input id="pin" type="password" placeholder="Enter 4 Digit Pin" required
-                    class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
+        <div class="flex justify-between items-center px-4 py-[13px] rounded-[12px] bg-[#ffffff]">
+            <div class="flex items-center gap-2">
+                <div class="w-[45px] h-[45px] rounded-[50%] bg-[#0808080D] flex items-center justify-center">
+                    <img src="/assets/wallet1.png" alt="wallet pic" />
+                </div>
+                <div class="flex flex-col text-[#080808B3]">
+                    <h1 class="font-semibold">Gas Bill</h1>
+                    <p class="text-[12px]">Today <span>01:44 AM</span></p>
+                </div>
             </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
 
-            <button id="addMoney" type="submit"
-                class="btn btn-active btn-primary w-full bg-[#0874F2] border-none rounded-[32px] text-[18px] h-[50px]">
-                Add Money
-            </button>
 
-        </form>
     </div>
 
-    <script src="home.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
