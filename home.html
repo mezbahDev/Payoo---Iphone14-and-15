@@ -61,37 +61,37 @@
 
         <div class="mt-6 flex flex-wrap gap-[12px]">
 
-            <div
-                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5]">
+            <div id="addBtn"
+                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5] cursor-pointer">
                 <img src="/assets/purse1.png" alt="money pic" />
                 <p class="text-[14px] text-[#666768]">Add Money</p>
             </div>
-            <div
-                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5]">
+            <div id="withdrawBtn"
+                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5] cursor-pointer">
                 <img src="/assets/send1.png" alt="send pic" />
                 <p class="text-[14px] text-[#666768]">Cashout</p>
             </div>
 
-            <div
-                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5]">
+            <div id="transferBtn"
+                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5] cursor-pointer">
                 <img src="/assets/money1.png" alt="Transfer" />
                 <p class="text-[14px] text-[#666768]">Transfer Money</p>
             </div>
 
             <div
-                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5]">
+                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5] cursor-pointer">
                 <img src="/assets/bonus1.png" alt="bonus pic" />
                 <p class="text-[14px] text-[#666768]">Get Bonus</p>
             </div>
 
             <div
-                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5]">
+                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5] cursor-pointer">
                 <img src="/assets/purse1.png" alt="purse pic" />
                 <p class="text-[14px] text-[#666768]">Pay Bill</p>
             </div>
 
             <div
-                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5]">
+                class="flex flex-col items-center border border-1 w-[120px] px-[10px] py-[20px] gap-2 rounded-[12px] border-[#e5e5e5] cursor-pointer">
                 <img src="/assets/transaction1.png" alt="transection pic" />
                 <p class="text-[14px] text-[#666768]">Transections</p>
             </div>
@@ -103,7 +103,7 @@
 
     <!-- add money section -->
 
-    <div class="px-6 mb-[140px] bg-[#F4F5F7] pt-8 flex flex-col gap-4">
+    <div id="addMoneyParent" class="px-6 pb-[140px] bg-[#F4F5F7] pt-8 flex flex-col gap-4">
         <h1 class="text-[#080808] font-semibold text-[18px]">Add Money</h1>
 
         <form class=" flex flex-col gap-4 bg-[#ffffff] p-6 rounded-[24px]">
@@ -127,7 +127,7 @@
 
             <div class="flex flex-col w-full gap-3">
                 <label class="font-light pl-1 font-medium text-[#080808B3]">Amount to Add</label>
-                <input id="addAmount" type="number" placeholder="Add Amount to withdraw" required
+                <input id="addAmount" type="number" placeholder="Add Amount" required
                     class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
             </div>
 
@@ -137,9 +137,81 @@
                     class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
             </div>
 
-            <button id="addMoney" type="submit"
+            <button id="addButton" type="submit"
                 class="btn btn-active btn-primary w-full bg-[#0874F2] border-none rounded-[32px] text-[18px] h-[50px]">
                 Add Money
+            </button>
+
+        </form>
+    </div>
+
+
+
+    <!-- withdraw money section -->
+
+    <div id="cashOutParent" class="px-6 pb-[140px] bg-[#F4F5F7] pt-8 flex flex-col gap-4 hidden">
+        <h1 class="text-[#080808] font-semibold text-[18px]">Cash Out</h1>
+
+        <form class=" flex flex-col gap-4 bg-[#ffffff] p-6 rounded-[24px]">
+
+            <div class="flex flex-col w-full gap-3">
+                <label class="font-light pl-1 font-medium text-[#080808B3]">Agent Number</label>
+                <input id="agentNumber" type="number" placeholder="Enter 11 digit number" required
+                    class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
+            </div>
+
+            <div class="flex flex-col w-full gap-3">
+                <label class="font-light pl-1 font-medium text-[#080808B3]">Amount</label>
+                <input id="withdrawAmount" type="number" placeholder="Enter Amount to withdraw" required
+                    class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
+            </div>
+
+            <div class="flex flex-col w-full gap-3">
+                <label class="font-light pl-1 font-medium text-[#080808B3]">Pin Number</label>
+                <input id="pin" type="password" placeholder="Enter 4 Digit Pin" required
+                    class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
+            </div>
+
+            <button id="cashOutButton" type="submit"
+                class="btn btn-active btn-primary w-full bg-[#0874F2] border-none rounded-[32px] text-[18px] h-[50px]">
+                Withdraw Money
+            </button>
+
+        </form>
+    </div>
+
+
+
+
+
+    <!-- transfer money section -->
+
+    <div id="transferParent" class="px-6 pb-[140px] bg-[#F4F5F7] pt-8 flex flex-col gap-4 hidden">
+        <h1 class="text-[#080808] font-semibold text-[18px]">Transfer Money</h1>
+
+        <form class=" flex flex-col gap-4 bg-[#ffffff] p-6 rounded-[24px]">
+
+            <div class="flex flex-col w-full gap-3">
+                <label class="font-light pl-1 font-medium text-[#080808B3]">Agent Number</label>
+                <input id="transferAccountNumber" type="number" placeholder="User Account Number" required
+                    class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
+            </div>
+
+            <div class="flex flex-col w-full gap-3">
+                <label class="font-light pl-1 font-medium text-[#080808B3]">Amount</label>
+                <input id="transferAmount" type="number" placeholder="Enter Amount to transfer" required
+                    class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
+            </div>
+
+            <div class="flex flex-col w-full gap-3">
+                <label class="font-light pl-1 font-medium text-[#080808B3]">Pin Number</label>
+                <input id="transferPin" type="password" placeholder="Enter 4 Digit Pin" required
+                    class="px-5 py-4 h-[40px] rounded-[32px] bg-[#F4F5F7] border-none shadow border-gray-300 focus:border-blue-400 focus:outline-none" />
+            </div>
+
+            <button id="transferbutton" type="submit"
+                class="btn btn-active btn-primary w-full bg-[#0874F2] border-none rounded-[32px] text-[18px] h-[50px]">
+                Send Now
             </button>
 
         </form>
