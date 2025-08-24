@@ -86,7 +86,6 @@ cashOutBtn.addEventListener("click", function (e) {
     }
     document.getElementById("mainBalance").innerText =
       mainBalanceValue - withdrawAmount;
-
     // clear form
     document.getElementById("agentNumber").value = "";
     document.getElementById("withdrawAmount").value = "";
